@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1"
+    />
+
+ 
+    <link
+      href="https://unpkg.com/@blueprintjs/icons@4/lib/css/blueprint-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/@blueprintjs/core@4/lib/css/blueprint.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/@blueprintjs/popover2@1/lib/css/blueprint-popover2.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        min-height: -webkit-fill-available;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* .bp4-dark #root {
+        background-color: #30404d;
+      } */
+      #root {
+        width: 100vw;
+        height: 100%;
+      }
+    </style>
+
+    <!-- <script
+      src="https://browser.sentry-cdn.com/7.33.0/bundle.tracing.replay.min.js"
+      integrity="sha384-r6F+mzvQDMgIeW691qWNnOMWoxI4prCcX+pFIwb6xkPCDFt7F82JhTgU1uvDLdgR"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.init({
+        dsn: 'https://e7d484f3277f4792a7c924a7004c20a8@o1067670.ingest.sentry.io/4504571570749440',
+        integrations: [
+          // new Sentry.BrowserTracing(),
+          new Sentry.Integrations.Replay(),
+        ],
+
+        // Set tracesSampleRate to 1.0 to capture 100%
+        // of transactions for performance monitoring.
+        // We recommend adjusting this value in production
+        tracesSampleRate: 1.0,
+      });
+      // You can do the same thing using `addGlobalEventProcessor`
+      Sentry.addGlobalEventProcessor(function (event, hint) {
+        // Add anything to the event here
+        // returning `null` will drop the event
+        console.log(1);
+        event.store = window.store.toJSON();
+        return event;
+      });
+    </script> -->
+  </head>
+  <body class="">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <!-- <script
+      async
+      defer
+      data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%"
+      src="https://plausible.io/js/script.tagged-events.js"
+    ></script> -->
+  </body>
+</html>
