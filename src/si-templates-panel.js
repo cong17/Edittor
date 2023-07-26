@@ -57,3 +57,17 @@ export const TemplatesSection = {
   ),
   Panel: TemplatesPanel,
 };
+
+export async function editTemplate(store){
+  const ItemID=localStorage.getItem("_ItemIDSoBao")
+  if (ItemID) {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}?do=editTemplate&ItemID=${ItemID}`);
+    // Kiểm tra mã trạng thái của phản hồi
+    if (!response.ok) {
+      throw new Error('Lỗi khi gọi API');
+    }
+    const jsonData = await response.json();
+    // Chuyển đổi dữ liệu phản hồi sang định dạng JSON
+    store.loadJSON(JSON.parse(jsonData));;
+  }
+} 

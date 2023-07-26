@@ -67,7 +67,7 @@ export default observer(({ store }) => {
               setSaving(true);
               const json = store.toJSON();
               
-              fetch(`${process.env.REACT_APP_API_URL}?do=SaveJsonDesign`, {
+              fetch(`${process.env.REACT_APP_API_URL}?do=SaveJsonDesign&ItemID=${localStorage.getItem('_ItemIDSoBao')}`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ export default observer(({ store }) => {
               const jsonData = {
                 ItemID: localStorage.getItem("_ItemIDSoBao"),
                 file: base64,
-               
+                template: JSON.stringify(store.toJSON())
               };
               fetch(`${process.env.REACT_APP_API_URL}?do=SavePDFDesign`, {
                 method: 'POST',
