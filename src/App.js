@@ -17,7 +17,7 @@ import { ImageRemoveBackground } from './background-remover';
 
 import Topbar from './topbar/topbar';
 import { PuterModal } from './puter-modal';
-import { TemplatesSection } from './si-templates-panel';
+import { TemplatesSection,editTemplate } from './si-templates-panel';
 import { ResizeSection } from './si-resize-panel';
 import { ImagesAndUploadSection } from './si-upload-panel';
 
@@ -50,6 +50,7 @@ const App = observer(({ store }) => {
     alert("Chức năng không khả dụng. Vui lòng liên hệ quản trị viên để được giúp đỡ");
     return;
   }
+  editTemplate(store)
   return (
       <div
         style={{
